@@ -1,0 +1,11 @@
+title: Artists
+template: artists/show
+layout: layout
+mount: b7051d5e-d583-4219-a407-1e8690a5f26f
+revisions: false
+route: '/artists/{slug}'
+date: true
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private
