@@ -12,7 +12,7 @@ jobs:
  
     - name: Install composer dependencies
       run: |
-        composer install  install --no-ansi --no-dev --no-interaction --no-plugins --no-scripts --optimize-autoloader
+        composer install --no-ansi --no-dev --no-interaction --no-plugins --no-scripts --optimize-autoloader
  
     - name: Prepare Laravel Application
       run: |
