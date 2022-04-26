@@ -18,6 +18,7 @@ jobs:
       run: |
         cp .env.prod .env
         php artisan key:generate
+        php please install
  
     - name: Install front-end dependencies
       run: |
@@ -27,7 +28,7 @@ jobs:
     - name: Production Deployment
       uses: burnett01/rsync-deployments@5.2
       with:
-        switches: -avzr --delete
+        switches: -avzr --delete --exclude={'users/','content/'}
         path: ./
         remote_path: ${{ secrets.REMOTE_TARGET }}
         remote_host: ${{ secrets.REMOTE_HOST }}
