@@ -16,9 +16,8 @@ jobs:
  
     - name: Prepare Laravel Application
       run: |
-        cp .env.ci .env
+        cp .env.prod .env
         php artisan key:generate
-        php artisan statamic:install
  
     - name: Install front-end dependencies
       run: |
